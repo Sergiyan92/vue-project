@@ -1,12 +1,7 @@
 <template>
   <div id="app">
-    <Slot>
-      <h2 slot="title">{{ slotTitle }}</h2>
-      <p slot="text">Text test for slot</p>
-    </Slot>
-    <button type="button" @click="component = 'Reg'">Reg</button>
-    <button type="button" @click="component = 'Aut'">Aut</button>
-    <KeepAlive><component :is="component"></component></KeepAlive>
+    <h2>Outer title</h2>
+    <List></List>
   </div>
 </template>
 
@@ -34,4 +29,8 @@ export default {
 };
 </script>
 
-<style></style>
+<style scoped>
+h2 {
+  color: red;
+}
+</style>
