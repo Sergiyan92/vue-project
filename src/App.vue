@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <h2>Outer title</h2>
-    <List :people="people" />
+    <List :people="people" @message="displayMessage" />
   </div>
 </template>
 
@@ -26,6 +26,11 @@ export default {
       slotTitle: "Test title",
       people: ["Petya", "Vasya", "Grisha", "Slava", "Senya"]
     };
+  },
+  methods: {
+    displayMessage: function(message) {
+      this.people.push(message);
+    }
   }
 };
 </script>
