@@ -45,9 +45,9 @@
         <h2>Post preview:</h2>
         <article class="post">
           <!-- Title preview -->
-          <h3>{{ post.title }}</h3>
+          <h3>{{ post.title | uppercase }}</h3>
           <!-- Text preview -->
-          <p>{{ post.text }}</p>
+          <p>{{ post.text | truncate }}</p>
           <!-- Tags preview -->
           <ul>
             <li v-for="category in post.categories">{{ `#${category}` }}</li>
@@ -74,6 +74,11 @@ export default {
       },
       authors: ["Petya", "Vasya", "Grisha", "Slava", "Senya"]
     };
+  },
+  filters: {
+    uppercase: function(value) {
+      return value.toUpperCase();
+    }
   }
 };
 </script>
