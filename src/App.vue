@@ -1,7 +1,6 @@
 <template>
   <div id="app">
-    <Heder></Heder>
-    <List :people="people" @message="displayMessage" />
+    <AddBlog></AddBlog>
   </div>
 </template>
 
@@ -11,13 +10,15 @@ import Aut from "./components/Aut.vue";
 import Reg from "./components/Reg.vue";
 import Heder from "./components/Heder.vue";
 import Slot from "./components/Slot.vue";
+import AddBlog from "./components/AddBlog.vue";
 export default {
   components: {
     List,
     Aut,
     Reg,
     Heder,
-    Slot
+    Slot,
+    AddBlog
   },
   data() {
     return {
