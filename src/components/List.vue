@@ -9,6 +9,7 @@
 </template>
 
 <script>
+import { bus } from "../main";
 export default {
   props: {
     people: {
@@ -27,8 +28,8 @@ export default {
       console.log(this.people);
     },
     saveMessage: function() {
-      this.$emit("message", this.message);
-      console.log(this.message);
+      bus.$emit("message", this.message);
+      this.message = "";
     }
   }
 };

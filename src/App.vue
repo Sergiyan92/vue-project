@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <h2>Outer title</h2>
+    <Heder></Heder>
     <List :people="people" @message="displayMessage" />
   </div>
 </template>

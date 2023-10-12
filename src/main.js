@@ -5,6 +5,7 @@ import App from "./App";
 // import List from "./components/List.vue";
 Vue.config.productionTip = false;
 
+export const bus = new Vue();
 // Vue.component("List", List);
 /* eslint-disable no-new */
 new Vue({
