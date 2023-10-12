@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <h2>Outer title</h2>
-    <List></List>
+    <List :people="people" />
   </div>
 </template>
 
@@ -23,7 +23,8 @@ export default {
     return {
       title: "My app",
       component: "Aut",
-      slotTitle: "Test title"
+      slotTitle: "Test title",
+      people: ["Petya", "Vasya", "Grisha", "Slava", "Senya"]
     };
   }
 };

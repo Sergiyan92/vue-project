@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h2>Inner title</h2>
+    <h2 @click="show">Inner title</h2>
     <ul>
       <li v-for="person in people">{{ person }}</li>
     </ul>
@@ -9,10 +9,20 @@
 
 <script>
 export default {
+  props: {
+    people: {
+      type: Array,
+      required: false,
+      default: []
+    }
+  },
   data() {
-    return {
-      people: ["Petya", "Vasya", "Grisha", "Slava", "Senya"]
-    };
+    return {};
+  },
+  methods: {
+    show: function() {
+      console.log(this.people);
+    }
   }
 };
 </script>
